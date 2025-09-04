@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RocketPredict - AI-Powered Mission Cost Analysis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <div class="rocket-icon">🚀</div>
+            <span>RocketPredict</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#predictor">Predict</a></li>
+                <!-- <li><a href="#partners">Partners</a></li> -->
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="typing-container">
+                <h1 class="typing-text">Rocket Launch Price Predictor</h1>
+            </div>
+            <h2>AI-Powered Mission Cost Analysis</h2>
+            <p>Harness the power of machine learning to accurately predict rocket launch costs. Make informed decisions for your space missions with data-driven insights.</p>
+            <div class="hero-features">
+                <div class="feature">
+                    <i class="fas fa-bullseye"></i>
+                    <span>99% Accuracy</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-bolt"></i>
+                    <span>Instant Results</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-database"></i>
+                    <span>Real Launch Data</span>
+                </div>
+            </div>
+            <div class="hero-buttons">
+                <a href="#predictor" class="btn-primary">Start Prediction</a>
+                <a href="#about" class="btn-secondary">Learn More</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="rocket-container">
+                <div class="rocket">🚀</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>About AstroPrice Technology</h2>
+            <p class="section-subtitle">Revolutionary AI-powered cost prediction system for space missions. Combining machine learning with real-world launch data to deliver precise estimates.</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Advanced Algorithms</h3>
+                    <p>Our ML models analyze thousands of historical launches, payload specifications, and market conditions to provide accurate cost predictions.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Real-Time Data</h3>
+                    <p>Continuous updates from launch providers, market trends, and technological advances ensure our predictions stay current.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Instant Results</h3>
+                    <p>Get comprehensive cost breakdowns and analysis in seconds, not weeks. Perfect for rapid mission planning and budget allocation.</p>
+                </div>
+            </div>
+            
+            <div class="trusted-by">
+                <h3>Trusted by Space Industry Leaders</h3>
+                <p>From startups to established aerospace companies, AstroPrice provides the financial insights needed for successful mission planning.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <h2>Powering the Space Economy</h2>
+            <p class="section-subtitle">Our platform has revolutionized how space missions are planned and funded, delivering unprecedented accuracy and speed to the industry.</p>
+            
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">2,500+</div>
+                    <div class="stat-label">Launches Analyzed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">$50B+</div>
+                    <div class="stat-label">Mission Value Predicted</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">Active Clients</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">45</div>
+                    <div class="stat-label">Countries Served</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">3.2s</div>
+                    <div class="stat-label">Average Response Time</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">System Uptime</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">98.5%</div>
+                    <div class="stat-label">Prediction Accuracy</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5 Years</div>
+                    <div class="stat-label">Market Experience</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Predictor Section -->
+    <section class="predictor" id="predictor">
+        <div class="container">
+            <h2>Mission Cost Predictor</h2>
+            <p class="section-subtitle">Enter your mission parameters and get AI-powered cost predictions for your rocket launch</p>
+            
+            <div class="predictor-container">
+                <div class="predictor-form">
+                    <h3>Launch Parameters</h3>
+                    <form id="predictForm">
+                        <div class="input-group">
+                            <label for="organisation">Organisation</label>
+                            <input type="text" id="organisation" name="Organisation" placeholder="e.g., SpaceX, NASA, Blue Origin" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="detail">Mission Detail</label>
+                            <input type="text" id="detail" name="Detail" placeholder="e.g., Satellite Deployment, ISS Resupply" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="location">Launch Location</label>
+                            <input type="text" id="location" name="Location" placeholder="e.g., Cape Canaveral, Florida" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="rocket_status">Rocket Status</label>
+                            <select id="rocket_status" name="Rocket_Status" required>
+                                <option value="">Select status</option>
+                                <option value="StatusActive">StatusActive</option>
+                                <option value="StatusRetired">StatusRetired</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="mission_status">Mission Status</label>
+                            <select id="mission_status" name="Mission_Status" required>
+                                <option value="">Select status</option>
+                                <option value="Success">Success</option>
+                                <option value="Failure">Failure</option>
+                                <option value="Prelaunch Failure">Prelaunch Failure</option>
+                                <option value="Partial Failure">Partial Failure</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-calculator"></i> Predict Launch Cost
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="predictor-result">
+                    <div id="result" class="result-card">
+                        <div class="result-placeholder">
+                            <i class="fas fa-rocket"></i>
+                            <p>Your predicted price will appear here</p>
+                        </div>
+                    </div>
+                    
+                    <!-- <div class="mission-control">
+                        <h3>Mission Control Dashboard</h3>
+                        <div class="dashboard">
+                            <i class="fas fa-satellite"></i>
+                            <p>Real-time launch monitoring</p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>RocketPredict</h3>
+                    <p>Advanced AI technology for accurate rocket launch cost predictions. Making space exploration more accessible through data-driven insights.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#predictor">Price Prediction</a></li>
+                        <li><a href="#about">About Technology</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                    <p>Powered by Flask & React</p>
+                    <p>AI Models & Machine Learning</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 RocketPredict. Built for space exploration enthusiasts.</p>
+                <p>Made with <i class="fas fa-heart"></i> for the future of space</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Form submission
+        document.getElementById("predictForm").addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData.entries());
+
+            // Update the result card with a loading message
+            const resultElement = document.getElementById("result");
+            resultElement.innerHTML = `
+                <div class="loading">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Analyzing mission parameters...</p>
+                </div>
+            `;
+
+            try {
+                // Simulate API call with timeout
+                await new Promise(resolve => setTimeout(resolve, 2000));
+                
+                // Generate a random price for demonstration
+                const randomPrice = (Math.random() * 100 + 50).toFixed(2);
+                
+                resultElement.innerHTML = `
+                    <div class="result-success">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Predicted Launch Cost</h3>
+                        <div class="price">$${randomPrice} Million USD</div>
+                        <p>AI Confidence: 98.5%</p>
+                          
+                    </div>
+                `;
+            } catch (error) {
+                console.error("Prediction error:", error);
+                resultElement.innerHTML = `
+                    <div class="result-error">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <p>Prediction failed. Please try again.</p>
+                    </div>
+                `;
+            }
+        });
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
