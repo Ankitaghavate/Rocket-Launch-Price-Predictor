@@ -3,9 +3,7 @@ services:
     name: your-app-name
     env: python
     buildCommand: pip install --only-binary :all: -r requirements.txt
-    startCommand: python app.py  # or gunicorn app:app, etc.
+    startCommand: python app.py
     envVars:
-      - key: PYTHON_VERSION
-        value: 3.11.9
       - key: PIP_ONLY_BINARY
         value: :all:
